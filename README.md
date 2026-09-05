@@ -21,7 +21,19 @@ Or run on demand with `npx`:
 
 ```bash
 npx mcp-real-time-scout
+# or run straight from the GitHub source (builds automatically):
+npx -y github:VibeLeading/mcp-real-time-scout
 ```
+
+## Requirements
+
+- **Node.js >= 22** — required. The server uses the global `fetch` API and
+  `AbortSignal.timeout`; on older Node versions the process fails to start,
+  which MCP clients report generically as "connection closed".
+- **Optional — web search keys.** The `search_web` tool needs
+  `MCP_SEARCH_PROVIDER` (`brave` | `tavily`) and `MCP_SEARCH_API_KEY` set.
+  Without them it returns a clear error; all other tools work unconfigured.
+- No other runtime dependencies.
 
 ## Client configuration
 
