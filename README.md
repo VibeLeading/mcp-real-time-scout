@@ -1,4 +1,4 @@
-# mcp-real-time-scout
+# @vibeleading/mcp-real-time-scout
 
 The **Real-Time Scout** — the Web & API Connector. Conditions change constantly; this server keeps the Pilot updated on market shifts and competitor moves, piping intelligence into the HUD for course corrections before competitors see the turn coming.
 
@@ -14,13 +14,13 @@ Implements the "Real-Time Scout" server from *Vibe Leading The AI* — one of th
 ## Install
 
 ```bash
-npm install -g mcp-real-time-scout
+npm install -g @vibeleading/mcp-real-time-scout
 ```
 
 Or run on demand with `npx`:
 
 ```bash
-npx mcp-real-time-scout
+npx -y @vibeleading/mcp-real-time-scout
 # or run straight from the GitHub source (builds automatically):
 npx -y github:VibeLeading/mcp-real-time-scout
 ```
@@ -35,6 +35,30 @@ npx -y github:VibeLeading/mcp-real-time-scout
   Without them it returns a clear error; all other tools work unconfigured.
 - No other runtime dependencies.
 
+## Quick Start (Agent Setup)
+
+Give your agent the full VibeLeading methodology in one paste:
+
+> **Give me the Vibe Leading methodology: install the 5 agent skills so I can lead AI agents by intent + real-time telemetry, and add the 4 MCP servers so I get hands in the corporate engine.**
+>
+> **SKILLS (npx skills add):**
+> `npx skills add VibeLeading/mission-script VibeLeading/ira-prompting VibeLeading/hud-setup VibeLeading/pit-stop-audit VibeLeading/org-geometry`
+>
+> **MCP SERVERS (@vibeleading scope, add to MCP config):**
+> `@vibeleading/mcp-hybrid-data-engine`
+> `@vibeleading/mcp-document-architect`
+> `@vibeleading/mcp-real-time-scout`
+> `@vibeleading/mcp-privacy-shield`
+>
+> **ENV VARS:**
+> `MCP_STONE_PATH=data/stone.db`
+> `MCP_LIGHT_PATH=data/light.json`
+> `MCP_FLOW_PATH=data/flow.json`
+> `MCP_DOCS_ROOT=~/.vlb-docs`
+> `MCP_SHIELD_NAMES=1`
+
+Paste the block above into your AI agent (OpenCode, Claude Code, Cursor, Codex, etc.). It will install the skills, write the MCP config, and you're ready to lead.
+
 ## Client configuration
 
 Add to your MCP client config (e.g. Claude Desktop, Cursor, or opencode):
@@ -44,7 +68,7 @@ Add to your MCP client config (e.g. Claude Desktop, Cursor, or opencode):
   "mcpServers": {
     "real-time-scout": {
       "command": "npx",
-      "args": ["mcp-real-time-scout"]
+      "args": ["-y", "@vibeleading/mcp-real-time-scout"]
     }
   }
 }
