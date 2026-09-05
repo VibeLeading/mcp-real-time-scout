@@ -32,5 +32,13 @@
     "vibe-leading",
     "ai"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VibeLeading/mcp-real-time-scout.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VibeLeading/mcp-real-time-scout/issues"
+  },
+  "homepage": "https://github.com/VibeLeading/mcp-real-time-scout#readme"
 }
